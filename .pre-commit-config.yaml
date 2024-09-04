@@ -1,0 +1,16 @@
+default_stages: [commit, push]
+
+repos:
+  - repo: https://github.com/omnilib/ufmt
+    rev: v2.7.2
+    hooks:
+      - id: ufmt
+        additional_dependencies:
+          - black
+          - usort
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: check-yaml
