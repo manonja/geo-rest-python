@@ -14,3 +14,10 @@ repos:
     hooks:
       - id: end-of-file-fixer
       - id: check-yaml
+      - id: trailing-whitespace
+
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.6.3
+    hooks:
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix]
