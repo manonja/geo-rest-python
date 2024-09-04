@@ -17,6 +17,7 @@ black = "^24.8.0"
 ufmt = "^2.7.2"
 usort = "^1.0.8.post1"
 mypy = "^1.11.2"
+ruff = "^0.6.3"
 
 [build-system]
 requires = ["poetry-core"]
