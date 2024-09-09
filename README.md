@@ -51,7 +51,7 @@ This will return the GeoJSON object associated with the provided ID.
 
 ## 🤝 Contributing
 
-We welcome contributions! To get started:
+Have ideas to improve the geo-rest-python? We welcome your contributions! Whether it's fixing a bug or adding new features, feel free to fork the repository, create a feature branch, and send a pull request:
 
 1. Fork the repository.
 2. Create a feature branch: `git checkout -b feature/new-feature`.
@@ -62,6 +62,12 @@ We welcome contributions! To get started:
 Ensure that your code passes the pre-commit hooks by running:
 
 `pre-commit run --all-files`
+
+## 📣 Spread the Word
+
+If you enjoy using geo-rest-python, share it with your friends and fellow developers!
+
+[Twitter](#) | [Facebook](#) | [LinkedIn](#)
 
 ## 📜 License
 
