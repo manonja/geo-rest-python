@@ -17,37 +17,65 @@ A simple and efficient REST HTTP server built to serve GeoJSON data. **geo-rest-
 
 ## 📦 Installation and Setup
 
+### Prerequisites
+Before you begin, ensure you have the following installed on your system:
+
+- Python 3.8 or higher
+- pip (or your prefered python package installer)
+- Git
+
+### Quick start
 To get started with **geo-rest-python**, follow these steps:
 
 1. Clone this repository:
 
    `git clone https://github.com/yourusername/geo-rest-python.git`
-
-2. Navigate to the project directory:
-
    `cd geo-rest-python`
 
-3. Create a virtual environment and install dependencies:
+2. Install Poetry (if not already installed):
 
-   ```
-   python3 -m venv env
-   source env/bin/activate
-   pip install -r requirements.txt
-   ```
+   `pip install poetry`
 
-4. Run the FastAPI server:
+3. Install project dependencies
 
-   `uvicorn app.main:app --reload`
-
-5. Visit `http://127.0.0.1:8000/docs` to explore the API using the interactive Swagger UI.
+   `poetry install`
 
 ## 📚 Usage
 
-Once the server is running, you can access GeoJSON data through the exposed API endpoints. Example:
+### Step 1: Run the server
 
-`GET /geojson/{id}`
+Before using the client, you need to start the server. Open a terminal and run:
+   `poetry run run-server`
 
-This will return the GeoJSON object associated with the provided ID.
+This will start the server using Uvicorn. Keep this terminal open and running.
+
+### Step 2: Run the client
+
+Open a new terminal window. To run the script and fetch GeoJSON data for a country, use the following command:
+
+   `poetry run client-example [COUNTRY_NAME]`
+
+For example:
+   `poetry run client-example Netherlands`
+
+### Optional: Specify a custom API URL
+If you need to use a different API URL, you can specify it using the --base-url option:
+
+   `poetry run client-example Netherlands --base-url "http://example.com"`
+
+## ⚽️ Running Tests
+To run the tests for this project, use the following command:
+   `poetry run test`
+
+This will run all the tests in the tests/ directory.
+
+## 🐿️ Troubleshooting
+If you encounter any issues while running the script, please ensure that:
+
+- You have correctly installed all prerequisites.
+- You are in the correct directory (geo-rest-python).
+- You have run poetry install to install all dependencies.
+- The server is running in a separate terminal window before you try to use the client.
 
 ## 🤝 Contributing
 
