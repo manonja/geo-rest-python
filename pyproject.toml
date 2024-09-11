@@ -5,12 +5,19 @@ description = "REST server that provides geo-json data"
 authors = ["Manon <manon.jacquin@gmail.com>"]
 license = "BSDv3"
 readme = "README.md"
+packages = [{include = "geojson_client"}]
+
 
 [tool.poetry.dependencies]
 python = "^3.12"
 geojson = "^3.1.0"
 fastapi = "^0.112.2"
 uvicorn = "^0.30.6"
+pyproj = "^3.6.1"
+shapely = "^2.0.6"
+requests = "^2.32.3"
+typer = "^0.12.5"
+pytest = "^8.3.3"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -23,3 +30,7 @@ ruff = "^0.6.3"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+client-example = "geojson_client.main:main"
+run-server = "uvicorn main:app --reload"
